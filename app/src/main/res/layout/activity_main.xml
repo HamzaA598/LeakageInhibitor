@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/BTStatus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"
+        android:textStyle="bold" />
+
+    <ImageView
+        android:id="@+id/BTIcon"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_below="@id/BTStatus"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="5dp" />
+
+    <RelativeLayout
+        android:id="@+id/btnsLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/BTIcon"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="5dp">
+
+        <Button
+            android:id="@+id/onOffBtn"
+            android:layout_width="115dp"
+            android:layout_height="wrap_content"
+            android:background="@android:color/holo_blue_light"
+            android:text="on / off" />
+
+        <Button
+            android:id="@+id/discoverableBtn"
+            android:layout_width="115dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@id/onOffBtn"
+            android:background="@android:color/holo_blue_light"
+            android:text="Discoverable" />
+
+        <Button
+            android:id="@+id/scanBtn"
+            android:layout_width="115dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/onOffBtn"
+            android:layout_marginTop="10dp"
+            android:background="@android:color/holo_blue_light"
+            android:text="Scan for devices" />
+
+        <Button
+            android:id="@+id/startConnectionBtn"
+            android:layout_width="115dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/discoverableBtn"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_toRightOf="@id/scanBtn"
+            android:background="@android:color/holo_blue_light"
+            android:text="Start connection" />
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/availableTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="27dp"
+        android:layout_below="@+id/btnsLayout"
+        android:textColor="@android:color/holo_blue_dark"
+        android:textStyle="bold" />
+
+    <ListView
+        android:id="@+id/scannedDevicesLst"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:layout_marginLeft="27dp"
+        android:layout_marginRight="27dp"
+        android:layout_below="@id/availableTxt"
+        android:textStyle="bold"
+        android:layout_centerHorizontal="true"/>
+
+    <LinearLayout
+        android:id="@+id/pipesBtnsLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/scannedDevicesLst"
+        android:layout_marginTop="5dp">
+
+        <Button
+            android:id="@+id/pipe1Btn"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/indicator"
+            android:gravity="center"
+            android:text="Pipe 1"
+            android:textSize="25dp" />
+
+        <Button
+            android:id="@+id/pipe2Btn"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/indicator"
+            android:gravity="center"
+            android:text="Pipe 2"
+            android:textSize="25dp" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/pipe1StatusTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/pipesBtnsLayout"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="27dp"
+        android:layout_marginRight="27dp"
+        android:text="Pipe 1 is in good state :)"
+        android:textSize="20sp"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:textColor="@color/greenColor"/>
+
+    <TextView
+        android:id="@+id/pipe2StatusTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/pipe1StatusTV"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="27dp"
+        android:layout_marginRight="27dp"
+        android:text="Pipe 2 is in good state :)"
+        android:textSize="20sp"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:textColor="@color/greenColor" />
+
+    <!--<EditText-->
+    <!--android:id="@+id/editTxt"-->
+    <!--android:layout_width="210dp"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:hint="Enter char to start"-->
+    <!--android:layout_marginLeft="15dp"-->
+    <!--android:layout_marginTop="460dp" />-->
+
+    <!--<Button-->
+    <!--android:id="@+id/sendBtn"-->
+    <!--android:layout_width="110dp"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_marginLeft="225dp"-->
+    <!--android:layout_marginTop="460dp"-->
+    <!--android:background="@android:color/holo_blue_light"-->
+    <!--android:text="Send" />-->
+
+    <!--<TextView-->
+    <!--android:id="@+id/incomingTxt"-->
+    <!--android:text=""-->
+    <!--android:layout_width="100dp"-->
+    <!--android:layout_height="500dp"-->
+    <!--android:textStyle="bold"-->
+    <!--android:textColor="@android:color/holo_blue_dark"-->
+    <!--android:layout_marginTop="30dp" />-->
+
+</RelativeLayout>
